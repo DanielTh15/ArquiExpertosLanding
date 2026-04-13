@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap');
+
+:root {
+  --primary: #000D30;
+  --gold: #E8C067;
+  --light-blue: #A6B8E2;
+  --steel: #8A94AA;
+  --silver: #D3D7E2;
+  --text: #000D30;
+  --nav-bg: #ffffff;
+  --border: rgba(0, 13, 48, 0.1);
+}
+
+/* ── DARK THEME ───────────────────────────────────────── */
+body.dark-theme {
+  --text: #D3D7E2;
+  --nav-bg: #0d1225;
+  --border: rgba(211, 215, 226, 0.1);
+}
+
+body.dark-theme .navbar {
+  background: var(--nav-bg);
+  border-bottom-color: var(--border);
+}
+
+body.dark-theme .cta-btn {
+  background: var(--gold);
+  color: var(--primary);
+}
+
+body.dark-theme .cta-btn:hover {
+  background: var(--silver);
+  color: var(--primary);
+}
+
+body.dark-theme .hamburger span {
+  background: var(--silver);
+}
+
+/* ── HERO DARK ────────────────────────────────────────── */
+body.dark-theme .hero {
+  background-color: #0d1225;
+}
+
+body.dark-theme .hero .hero-title {
+  color: var(--silver);
+}
+
+body.dark-theme .hero .hero-title span {
+  color: var(--light-blue);
+}
+
+body.dark-theme .hero .hero-subtitle {
+  color: var(--steel);
+}
+
+body.dark-theme .hero .hero-stats {
+  border-top-color: rgba(211, 215, 226, 0.15);
+}
+
+body.dark-theme .hero .stat-number {
+  color: var(--silver);
+}
+
+body.dark-theme .hero .stat-label {
+  color: var(--steel);
+}

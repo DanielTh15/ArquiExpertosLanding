@@ -1,16 +1,3 @@
-:root {
-  --primary: #000D30;
-  --gold: #E8C067;
-  --light-blue: #A6B8E2;
-  --steel: #8A94AA;
-  --silver: #D3D7E2;
-  --bg: #ffffff;
-  --text: #000D30;
-  --nav-bg: #ffffff;
-  --border: rgba(0, 13, 48, 0.1);
-}
-
-/* ─── Base ─── */
 .navbar {
   background: var(--nav-bg);
   border-bottom: 1px solid var(--border);
@@ -23,61 +10,15 @@
   transition: background 0.3s;
 }
 
-/* ─── Logo ─── */
-.logo {
+.logo-navbar {
   display: flex;
   align-items: center;
-  gap: 10px;
-  text-decoration: none;
 }
 
-.logo-mark {
-  width: 36px;
-  height: 36px;
-  background: var(--primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: background 0.3s;
+.logoimg {
+  height: 3rem;
 }
 
-.logo-triangle {
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 14px solid var(--gold);
-  margin-bottom: 2px;
-}
-
-.logo-text-wrap {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 500;
-  font-size: 20px;
-  color: var(--primary);
-  letter-spacing: 0.04em;
-  line-height: 1;
-  transition: color 0.3s;
-}
-
-.logo-sub {
-  font-family: 'Jost', sans-serif;
-  font-size: 9px;
-  font-weight: 300;
-  letter-spacing: 0.2em;
-  color: var(--steel);
-  text-transform: uppercase;
-  margin-top: 2px;
-}
-
-/* ─── Nav Links ─── */
 .nav-links {
   display: flex;
   align-items: center;
@@ -102,7 +43,6 @@
   color: var(--gold);
 }
 
-/* ─── Right Side ─── */
 .nav-right {
   display: flex;
   align-items: center;
@@ -151,7 +91,6 @@
   line-height: 1;
 }
 
-/* ─── Hamburger ─── */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -170,7 +109,6 @@
   transition: transform 0.3s, opacity 0.3s;
 }
 
-/* ─── Mobile Menu ─── */
 .mobile-menu {
   display: none;
   position: absolute;
@@ -208,7 +146,6 @@
   color: var(--gold);
 }
 
-/* ─── Responsive ─── */
 @media (max-width: 680px) {
   .nav-links,
   .cta-btn {
@@ -218,37 +155,4 @@
   .hamburger {
     display: flex;
   }
-}
-
-/* ─── Dark Mode ─── */
-body.dark .navbar {
-  --nav-bg: #0d1225;
-  --border: rgba(211, 215, 226, 0.1);
-  --text: #D3D7E2;
-}
-
-body.dark .logo-mark {
-  background: var(--gold);
-}
-
-body.dark .logo-triangle {
-  border-bottom-color: var(--primary);
-}
-
-body.dark .logo-name {
-  color: var(--silver);
-}
-
-body.dark .cta-btn {
-  background: var(--gold);
-  color: var(--primary);
-}
-
-body.dark .cta-btn:hover {
-  background: var(--silver);
-  color: var(--primary);
-}
-
-body.dark .hamburger span {
-  background: var(--silver);
 }

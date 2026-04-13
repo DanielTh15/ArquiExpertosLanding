@@ -1,38 +1,34 @@
 <nav class="navbar">
-    <a routerLink="/" class="logo">
-        <div class="logo-mark">
-            <div class="logo-triangle"></div>
-        </div>
-        <div class="logo-text-wrap">
-            <span class="logo-name">ArquiExpertos</span>
-            <span class="logo-sub">Arquitectura &amp; Diseño</span>
-        </div>
-    </a>
+  <div class="logo-navbar">
+    <img [src]="themeService.isDark ? 'assets/logodark.png' : 'assets/logolight.png'"
+         alt="ArquiExpertos Logo"
+         class="logoimg">
+  </div>
 
-    <div class="nav-links">
-        <a routerLink="/services">Services</a>
-        <a routerLink="/portfolio">Portfolio</a>
-        <a routerLink="/about">About</a>
-        <a routerLink="/testimonials">Testimonials</a>
-        <a routerLink="/contact">Contact</a>
-    </div>
+  <div class="nav-links">
+    <a routerLink="/services">Services</a>
+    <a routerLink="/portfolio">Portfolio</a>
+    <a routerLink="/about">About</a>
+    <a routerLink="/testimonials">Testimonials</a>
+    <a routerLink="/contact">Contact</a>
+  </div>
 
-    <div class="nav-right">
-        <button class="cta-btn" routerLink="/contact">Get a Quote</button>
-        <button class="theme-toggle" (click)="themeService.toggleTheme()" title="Toggle dark mode">
-            <span class="theme-icon">{{ themeService.isDark ? '○' : '☽' }}</span>
-        </button>
-        <button class="hamburger" (click)="toggleMobileMenu()" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
+  <div class="nav-right">
+    <button class="cta-btn" routerLink="/contact">Get a Quote</button>
+    <button class="theme-toggle" (click)="themeService.toggleTheme()" title="Toggle dark mode">
+      <span class="theme-icon">{{ themeService.isDark ? '○' : '☽' }}</span>
+    </button>
+    <button class="hamburger" (click)="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 
-    <div class="mobile-menu" [class.open]="mobileMenuOpen">
-        <a routerLink="/services" (click)="mobileMenuOpen = false">Services</a>
-        <a routerLink="/portfolio" (click)="mobileMenuOpen = false">Portfolio</a>
-        <a routerLink="/about" (click)="mobileMenuOpen = false">About</a>
-        <a routerLink="/testimonials" (click)="mobileMenuOpen = false">Testimonials</a>
-        <a routerLink="/contact" (click)="mobileMenuOpen = false">Contact</a>
-        <button class="cta-btn" routerLink="/contact">Get a Quote</button>
-    </div>
+  <div class="mobile-menu" [class.open]="mobileMenuOpen">
+    <a routerLink="/services" (click)="mobileMenuOpen = false">Services</a>
+    <a routerLink="/portfolio" (click)="mobileMenuOpen = false">Portfolio</a>
+    <a routerLink="/about" (click)="mobileMenuOpen = false">About</a>
+    <a routerLink="/testimonials" (click)="mobileMenuOpen = false">Testimonials</a>
+    <a routerLink="/contact" (click)="mobileMenuOpen = false">Contact</a>
+    <button class="cta-btn" routerLink="/contact">Get a Quote</button>
+  </div>
 </nav>
